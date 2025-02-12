@@ -68,9 +68,11 @@
         </div>
     </div>
     <div id="zoomModal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <img class="modal-content" id="modalImg">
-        <p id="modalCaption"></p>
+        <div class="modal-content-container">
+            <img id="modalImg" class="modal-content">
+            <p id="modalCaption" class="modal-caption"></p> <!-- Caption below image -->
+            <span class="close" onclick="closeModal()">&times;</span>
+        </div>
     </div>
     <footer>
         <p style="text-align: center;">©Valentine's Day 2025</p>
