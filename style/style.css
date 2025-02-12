@@ -72,6 +72,7 @@ h2{
 
 .letterBody.disappeared {
     animation: disappear 1s forwards;
+}
 #valentine_text {
     font-size: 40px;
     text-align: center;
