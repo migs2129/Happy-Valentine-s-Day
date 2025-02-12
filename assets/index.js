@@ -28,3 +28,25 @@ function openSesame(){
         }, 1000);
     },500);
 }
+// Open Modal and Show Image
+function openModal(image) {
+    let modal = document.getElementById("zoomModal");
+    let modalImg = document.getElementById("modalImg");
+    let modalCaption = document.getElementById("modalCaption");
+
+    modal.style.display = "flex";  // Show modal
+    modalImg.src = image.src;  // Set clicked image as modal content
+    modalCaption.innerText = image.alt;  // Show description
+}
+
+// Close Modal
+function closeModal() {
+    document.getElementById("zoomModal").style.display = "none";
+}
+
+// Close modal when clicking outside the image
+document.getElementById("zoomModal").addEventListener("click", function(event) {
+    if (event.target === this) {
+        closeModal();
+    }
+});
