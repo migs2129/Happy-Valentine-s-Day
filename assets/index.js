@@ -36,8 +36,9 @@ function openModal(image) {
 
     modal.style.display = "flex";  // Show modal
     modalImg.src = image.src;  // Set clicked image as modal content
-    modalCaption.innerText = image.alt;  // Show description
+    modalCaption.innerText = image.alt;  // Display image description as caption
 }
+
 
 // Close Modal
 function closeModal() {
@@ -50,3 +51,4 @@ document.getElementById("zoomModal").addEventListener("click", function(event) {
         closeModal();
     }
 });
+
