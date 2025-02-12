@@ -72,17 +72,24 @@ h2{
 
 .letterBody.disappeared {
     animation: disappear 1s forwards;
-}#valentine_text {
+#valentine_text {
     font-size: 40px;
     text-align: center;
-    color: white;
+    color: black; /* Change text color for contrast */
     font-family: cursive;
-    height: 60vh;
-    padding-top: 100px;;
+    height: auto;
+    padding: 40px; /* Space inside the frame */
+    background: white; /* White frame background */
+    border: 10px solid white; /* White frame border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow effect */
+    border-radius: 15px; /* Optional rounded corners */
+    width: fit-content;
+    margin: auto; /* Center horizontally */
     opacity: 0; /* Start hidden */
     transform: scale(0.5); /* Start small */
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
+
 #image_container {
     display: flex; /* Or use grid if you prefer */
     justify-content: center;
