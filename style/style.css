@@ -159,18 +159,38 @@ h2{
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
+    text-align: end;
     justify-content: center;
     align-items: center;
+    font-family: cursive;
+    font-weight: bold;
+    text-align: end;
 }
-
-
-/* Zoom-in Image */
-.modal-content {
+.modal-content-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align */
     max-width: 80%;
     max-height: 80%;
+    background: white;
+    padding: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
     animation: zoomIn 0.3s ease-in-out;
+}
+
+.modal-content {
+    max-width: 100%;
+    max-height: 70vh;
+    border-radius: 10px;
+}
+.modal-caption {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: black;
+    text-align: center;
+    font-family: cursive;
 }
 
 /* Zoom Animation */
@@ -200,4 +220,3 @@ h2{
 .close:hover {
     color: red;
 }
-
