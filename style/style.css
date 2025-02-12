@@ -124,6 +124,8 @@ h2{
     margin-top: 20px;
     opacity: 0;
     font-family: cursive;
+    font-weight: bold;
+    font-size: 2em;
     transform: scale(0.8);
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
