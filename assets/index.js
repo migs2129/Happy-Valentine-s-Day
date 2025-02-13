@@ -74,3 +74,16 @@ function createFallingElements() {
         }, 3000);
     }
 }
+function toggleLoveLetter() {
+    var letter = document.getElementById("love_letter");
+    var envelope = document.getElementById("envelope");
+
+    if (letter.style.display === "none" || letter.style.display === "") {
+        letter.style.display = "block";
+        envelope.innerHTML = "💖 Click to close";
+    } else {
+        letter.style.display = "none";
+        envelope.innerHTML = "💌 Click to open";
+    }
+}
+
