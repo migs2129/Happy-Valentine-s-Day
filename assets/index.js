@@ -25,6 +25,9 @@ function openSesame(){
             
             photoGallery.style.opacity = "1";
             photoGallery.style.transform = "scale(1)";
+
+            // Calling Animation
+            createFallingElements();
         }, 1000);
     },500);
 }
@@ -37,6 +40,7 @@ function openModal(image) {
     modal.style.display = "flex";  // Show modal
     modalImg.src = image.src;  // Set clicked image as modal content
     modalCaption.innerText = image.alt;  // Display image description as caption
+    createFallingElements();
 }
 
 
@@ -52,3 +56,21 @@ document.getElementById("zoomModal").addEventListener("click", function(event) {
     }
 });
 
+// Function for animation of flowers and hearts
+function createFallingElements() {
+    for (let i = 0; i < 20; i++) {  // Adjust number of elements
+        let element = document.createElement("div");
+        element.classList.add("falling");
+        element.innerHTML = Math.random() > 0.5 ? "🌸" : "❤️"; // Randomly choose hearts or flowers
+        document.body.appendChild(element);
+        
+        element.style.left = Math.random() * window.innerWidth + "px"; // Random X position
+        element.style.animationDuration = (Math.random() * 2 + 2) + "s"; // Vary animation speed
+        element.style.fontSize = (Math.random() * 20 + 20) + "px"; // Random size
+
+        // Remove after animation ends
+        setTimeout(() => {
+            element.remove();
+        }, 3000);
+    }
+}
